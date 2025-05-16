@@ -34,11 +34,21 @@ patch_file(
 
 patch_file(
     PIPENV_ROOT + "patched/pip/_internal/index/package_finder.py",
-    724,
+    766,
     """
-        logger.critical(formats)
+        logger.critical(result)
+        logger.critical(detail)
 """
 )
+
+
+# patch_file(
+#     PIPENV_ROOT + "patched/pip/_internal/index/package_finder.py",
+#     724,
+#     """
+#         logger.critical(formats)
+# """
+# )
 
 
 # patch_file(
