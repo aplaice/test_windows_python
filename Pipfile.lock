@@ -15,8 +15,7 @@
             }
         ]
     },
-    "default": {},
-    "develop": {
+    "default": {
         "anki": {
             "hashes": [
                 "sha256:2cb4c11f96f5bf20197c12cea1ce42df151123297e73ab8fb8b298688f36127f",
@@ -310,5 +309,6 @@
             "markers": "python_version >= '3.9'",
             "version": "==2.4.0"
         }
-    }
+    },
+    "develop": {}
 }
