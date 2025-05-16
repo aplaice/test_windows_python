@@ -7,7 +7,7 @@ on:
 
 jobs:
   mamba_test:
-    runs-on: windows-2019
+    runs-on: macos-latest
 
     steps:
     - uses: actions/checkout@v2
