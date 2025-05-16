@@ -25,9 +25,9 @@ jobs:
       run: |
         python3 -m pip install --upgrade pipenv
 
-    - name: Get compatible tags
-      run: |
-        python3 -m pip debug --verbose
+    # - name: Get compatible tags
+    #   run: |
+    #     python3 -m pip debug --verbose
 
     # - name: Introspect pipenv
     #   run:
@@ -35,11 +35,19 @@ jobs:
 
     - name: Install deps with Pipenv
       run: |
-        pipenv --python "$env:pythonLocation\python.exe" install --dev
+        pipenv install --dev
 
-    - name: Get compatible tags from pipenv
+    # - name: Install deps with Pipenv
+    #   run: |
+    #     pipenv --python "$env:pythonLocation\python.exe" install --dev
+
+    - name: Check python location
       run: |
-        pipenv run pip debug --verbose
+        pipenv run python -c "import pathlib,sys; print(pathlib.Path(sys.executable).resolve())"
+
+    # - name: Get compatible tags from pipenv
+    #   run: |
+    #     pipenv run pip debug --verbose
 
     # - name: Install all other dependencies
     #   shell: bash
