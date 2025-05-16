@@ -25,6 +25,10 @@ jobs:
       run: |
         python3 -m pip install --upgrade pipenv
 
+    - name: Introspect pipenv
+      run:
+        pipenv run patch_pipenv.py
+
     - name: Install all other dependencies
       shell: bash
       run: |
