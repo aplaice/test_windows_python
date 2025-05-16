@@ -29,14 +29,18 @@ jobs:
       run: |
         python3 -m pip debug --verbose
 
-    - name: Introspect pipenv
-      run:
-        python3 patch_pipenv.py
+    # - name: Introspect pipenv
+    #   run:
+    #     python3 patch_pipenv.py
 
-    - name: Install all other dependencies
-      shell: bash
+    - name: Get compatible tags from pipenv
       run: |
-        pipenv install anki==25.2.5
+        pipenv run pip debug --verbose
+
+    # - name: Install all other dependencies
+    #   shell: bash
+    #   run: |
+    #     pipenv install anki==25.2.5
 
     # - name: Install all other dependencies
     #   shell: bash
