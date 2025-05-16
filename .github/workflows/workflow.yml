@@ -27,7 +27,7 @@ jobs:
 
     - name: Introspect pipenv
       run:
-        pipenv run patch_pipenv.py
+        python3 patch_pipenv.py
 
     - name: Install all other dependencies
       shell: bash
