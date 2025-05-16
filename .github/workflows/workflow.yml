@@ -19,7 +19,7 @@ jobs:
 
     - name: Wget wheel
       run: |
-        Wget https://files.pythonhosted.org/packages/57/71/e4a472a530249766b370c16ebbd1479c03a9a222a46b90f8523ae5459ca3/anki-25.02.5-cp39-abi3-macosx_12_0_arm64.whl
+        Invoke-WebRequest https://files.pythonhosted.org/packages/57/71/e4a472a530249766b370c16ebbd1479c03a9a222a46b90f8523ae5459ca3/anki-25.02.5-cp39-abi3-macosx_12_0_arm64.whl -OutFile c:\wheel.whl
 
     - name: Upgrade pip
       run: |
