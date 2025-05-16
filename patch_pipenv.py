@@ -34,7 +34,7 @@ patch_file(
 
 patch_file(
     PIPENV_ROOT + "patched/pip/_internal/index/package_finder.py",
-    725,
+    724,
     """
         logger.critical(formats)
 """
