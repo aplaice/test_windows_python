@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "426592bdd20565f15b28b4be4a71d9bc83594dba6dcb25d81ade35d96bea0d17"
+            "sha256": "5a8c1ca9ac97445d036bf8fffe5822298fb7e82b5f29565f05a2ea1fac29ebb0"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -15,32 +15,7 @@
             }
         ]
     },
-    "default": {
-        "dill": {
-            "hashes": [
-                "sha256:0633f1d2df477324f53a895b02c901fb961bdbf65a17122586ea7019292cbcf0",
-                "sha256:44f54bf6412c2c8464c14e8243eb163690a9800dbe2c367330883b19c7561049"
-            ],
-            "markers": "python_version >= '3.8'",
-            "version": "==0.4.0"
-        },
-        "pyfunctional": {
-            "hashes": [
-                "sha256:dfee0f4110f4167801bb12f8d497230793392f694655103b794460daefbebf2b",
-                "sha256:e184f3d7167e5822b227c95292c3557cf59edf258b1f06a08c8e82991de98769"
-            ],
-            "index": "pypi",
-            "version": "==1.5.0"
-        },
-        "tabulate": {
-            "hashes": [
-                "sha256:0095b12bf5966de529c0feb1fa08671671b3368eec77d7ef7ab114be2c068b3c",
-                "sha256:024ca478df22e9340661486f85298cff5f6dcdba14f3813e8830015b9ed1948f"
-            ],
-            "markers": "python_version >= '3.7'",
-            "version": "==0.9.0"
-        }
-    },
+    "default": {},
     "develop": {
         "anki": {
             "hashes": [
