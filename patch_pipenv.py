@@ -3,6 +3,7 @@ with open("C:/hostedtoolcache/windows/Python/3.10.11/x64/lib/site-packages/pipen
 
 split_source = factory_source.split("\n")
 
+split_source.insert(681, '        project_name')
 split_source.insert(681, '        logger.critical(cands)')
 
 with open("C:/hostedtoolcache/windows/Python/3.10.11/x64/lib/site-packages/pipenv/patched/pip/_internal/resolution/resolvelib/factory.py", "w") as f:
