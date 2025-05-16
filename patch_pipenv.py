@@ -36,6 +36,7 @@ patch_file(
     PIPENV_ROOT + "patched/pip/_internal/index/package_finder.py",
     771,
     """
+        logger.critical(link)
         logger.critical(result)
         logger.critical(detail)
 """
