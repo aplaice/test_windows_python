@@ -17,9 +17,23 @@ jobs:
       with:
         python-version: '3.10'
 
+    - name: Wget wheel
+      run: |
+        wget https://files.pythonhosted.org/packages/57/71/e4a472a530249766b370c16ebbd1479c03a9a222a46b90f8523ae5459ca3/anki-25.02.5-cp39-abi3-macosx_12_0_arm64.whl
+
     - name: Upgrade pip
       run: |
-        python3 -m pip install --upgrade anki
+        python3 -m pip install --upgrade pipenv
+
+    - name: Install all other dependencies
+      shell: bash
+      run: |
+        pipenv install anki==25.2.5
+
+    # - name: Install all other dependencies
+    #   shell: bash
+    #   run: |
+    #     pipenv install --dev
 
     # - name: Write dulwich version to requirements.txt
     #   shell: bash
@@ -29,11 +43,6 @@ jobs:
     # - name: Install pure dulwich from requirements.txt
     #   run: |
     #     pipenv run pip install --no-binary dulwich -r requirements.txt
-
-    - name: Install all other dependencies
-      shell: bash
-      run: |
-        pipenv install --dev
 
     # # TODO Run each test separately?  (See: #145.)
     # # TODO Remove PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python hack on upgrading python.
