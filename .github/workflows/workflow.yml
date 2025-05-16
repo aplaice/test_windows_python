@@ -32,7 +32,7 @@ jobs:
     - name: Install all other dependencies
       shell: bash
       run: |
-        pipenv install --verbose anki==25.2.5
+        pipenv install anki==25.2.5
 
     # - name: Install all other dependencies
     #   shell: bash
