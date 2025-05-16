@@ -27,12 +27,19 @@ patch_file(
     PIPENV_ROOT + "patched/pip/_internal/resolution/resolvelib/factory.py",
     681,
     """
-        logger.critical(project_name)
+        logger.critical(req.project_name)
         logger.critical(cands)
 """
 )
 
 
-#with open(PIPENV_ROOT + "patched/pip/_internal/index/package_finder.py") as f:
+patch_file(
+    PIPENV_ROOT + "patched/pip/_internal/index/package_finder.py",
+    869,
+    """
+        logger.critical(file_candidates)
+        logger.critical(page_candidates)
+"""
+)
     
 
