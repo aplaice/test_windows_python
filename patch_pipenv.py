@@ -34,10 +34,10 @@ patch_file(
 
 patch_file(
     PIPENV_ROOT + "patched/pip/_internal/index/package_finder.py",
-    216,
+    211,
     """
                 logger.critical(link)
-                logger.critical(supported_tags)
+                # logger.critical(supported_tags)
                 logger.critical(wheel.file_tags)
 """
 )
