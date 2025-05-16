@@ -7,7 +7,7 @@ on:
 
 jobs:
   mamba_test:
-    runs-on: windows-11-arm
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@v2
@@ -19,7 +19,7 @@ jobs:
 
     - name: Upgrade pip
       run: |
-        python3 -m pip install --upgrade pipenv
+        python3 -m pip install --upgrade anki
 
     # - name: Write dulwich version to requirements.txt
     #   shell: bash
