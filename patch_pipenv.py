@@ -37,7 +37,7 @@ patch_file(
     216,
     """
                 logger.critical(supported_tags)
-                logger.critical(wheel)
+                logger.critical(wheel.file_tags)
 """
 )
 
