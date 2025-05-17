@@ -12,10 +12,10 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Set up Python 3.10
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.10'
+    # - name: Set up Python 3.10
+    #   uses: actions/setup-python@v2
+    #   with:
+    #     python-version: '3.10'
 
     # - name: Wget wheel
     #   run: |
@@ -33,13 +33,13 @@ jobs:
     #   run:
     #     python3 patch_pipenv.py
 
-    # - name: Install deps with Pipenv
-    #   run: |
-    #     pipenv install --dev
-
     - name: Install deps with Pipenv
       run: |
-        pipenv --python "$env:pythonLocation\python.exe" install --dev
+        pipenv install --dev
+
+    # - name: Install deps with Pipenv
+    #   run: |
+    #     pipenv --python "$env:pythonLocation\python.exe" install --dev
 
     - name: Check python location
       run: |
