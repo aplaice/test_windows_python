@@ -41,10 +41,18 @@ jobs:
     #   run: |
     #     pipenv --python "$env:pythonLocation\python.exe" install --dev
 
+    - name: Get python bitness
+      run: |
+        C:\hostedtoolcache\windows\Python\3.10.11\x86\python.exe -c 'import platform, struct, sys; print(platform.python_version(), struct.calcsize("P")*8, sys.executable)'
+
     - name: Check python location
       run: |
         pipenv run python -c 'import sys; print("base:", getattr(sys, "_base_executable", None) or "not available")'
         # pipenv run python -c 'import platform, struct, sys; print(platform.python_version(), struct.calcsize("P")*8, sys.executable)'
+
+    - name: Get pipenv bitness
+      run: |
+        pipenv run python -c 'import platform, struct, sys; print(platform.python_version(), struct.calcsize("P")*8, sys.executable)'
 
     # - name: Get compatible tags from pipenv
     #   run: |
