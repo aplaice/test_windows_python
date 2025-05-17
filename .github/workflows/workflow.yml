@@ -43,6 +43,10 @@ jobs:
 
     - name: Get python bitness
       run: |
+        python3.10 -c 'import platform, struct, sys; print(platform.python_version(), struct.calcsize("P")*8, sys.executable)'
+
+    - name: Get python bitness
+      run: |
         C:\hostedtoolcache\windows\Python\3.10.11\x86\python.exe -c 'import platform, struct, sys; print(platform.python_version(), struct.calcsize("P")*8, sys.executable)'
 
     - name: Check python location
