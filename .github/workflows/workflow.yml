@@ -41,11 +41,11 @@ jobs:
     #   run: |
     #     pipenv --python "$env:pythonLocation\python.exe" install --dev
 
-    - name: Get python bitness
+    - name: Get python3.9 bitness
       run: |
-        python3.10 -c 'import platform, struct, sys; print(platform.python_version(), struct.calcsize("P")*8, sys.executable)'
+        python3 -c 'import platform, struct, sys; print(platform.python_version(), struct.calcsize("P")*8, sys.executable)'
 
-    - name: Get python bitness
+    - name: Get python3.10 bitness
       run: |
         C:\hostedtoolcache\windows\Python\3.10.11\x86\python.exe -c 'import platform, struct, sys; print(platform.python_version(), struct.calcsize("P")*8, sys.executable)'
 
