@@ -33,13 +33,13 @@ jobs:
     #   run:
     #     python3 patch_pipenv.py
 
-    - name: Install deps with Pipenv
-      run: |
-        pipenv install --dev
-
     # - name: Install deps with Pipenv
     #   run: |
-    #     pipenv --python "$env:pythonLocation\python.exe" install --dev
+    #     pipenv install --dev
+
+    - name: Install deps with Pipenv
+      run: |
+        pipenv --python "$env:pythonLocation\python.exe" install --dev
 
     - name: Get python3.9 bitness
       run: |
