@@ -12,18 +12,18 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    # - name: Set up Python 3.10
-    #   uses: actions/setup-python@v2
-    #   with:
-    #     python-version: '3.10'
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.10'
 
     # - name: Wget wheel
     #   run: |
     #     Invoke-WebRequest https://files.pythonhosted.org/packages/57/71/e4a472a530249766b370c16ebbd1479c03a9a222a46b90f8523ae5459ca3/anki-25.02.5-cp39-abi3-macosx_12_0_arm64.whl -OutFile c:\wheel.whl
 
-    - name: Upgrade pip
-      run: |
-        python3 -m pip install --upgrade pipenv
+    # - name: Upgrade pip
+    #   run: |
+    #     python3 -m pip install --upgrade pipenv
 
     # - name: Get compatible tags
     #   run: |
@@ -33,9 +33,9 @@ jobs:
     #   run:
     #     python3 patch_pipenv.py
 
-    - name: Install deps with Pipenv
-      run: |
-        pipenv install --dev
+    # - name: Install deps with Pipenv
+    #   run: |
+    #     pipenv install --dev
 
     # - name: Install deps with Pipenv
     #   run: |
