@@ -43,7 +43,7 @@ jobs:
 
     - name: Check python location
       run: |
-        pipenv run python -c "import pathlib,sys; print(pathlib.Path(sys.executable).resolve())"
+        python3 -c "import pathlib,sys; print(pathlib.Path(sys.executable).resolve())"
 
     # - name: Get compatible tags from pipenv
     #   run: |
