@@ -43,7 +43,8 @@ jobs:
 
     - name: Check python location
       run: |
-        pipenv run python -c 'import platform, struct, sys; print(platform.python_version(), struct.calcsize("P")*8, sys.executable)'
+        pipenv run python -c 'import sys; print("base:", getattr(sys, "_base_executable", None) or "not available")'
+        # pipenv run python -c 'import platform, struct, sys; print(platform.python_version(), struct.calcsize("P")*8, sys.executable)'
 
     # - name: Get compatible tags from pipenv
     #   run: |
